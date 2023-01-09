@@ -5,7 +5,11 @@
 ### Installation
 ```yaml
 dependencies:
-  pagination_flutter: ^0.0.1
+  pagination_flutter: ^0.0.3
+```
+
+```dart
+import 'package:pagination_flutter/pagination_flutter.dart';
 ```
 
 ## Usage
