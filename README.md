@@ -96,6 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
 | activeBtnStyle | ButtonStyle | null | ButtonStyle for the active page |
 | inactiveBtnStyle | ButtonStyle | null | ButtonStyle for the inactive pages |
 | inactiveTextStyle | TextStyle | null | TextStyle for the inactive pages |
+| spacing | double | 0 | Spacing between the pages |
 
 ## License
 
