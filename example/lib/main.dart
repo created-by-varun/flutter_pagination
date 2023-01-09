@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -40,8 +41,8 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Flutter Pagination"),
-      ),
+          title: const Text("Flutter Pagination"),
+          backgroundColor: Colors.black),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -49,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Pagination(
               numOfPages: 10,
               selectedPage: selectedPage,
-              pagesVisible: 3,
+              pagesVisible: 5,
               onPageChanged: (page) {
                 setState(() {
                   selectedPage = page;
@@ -57,12 +58,10 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               nextIcon: const Icon(
                 Icons.arrow_forward_ios,
-                color: Colors.blue,
                 size: 14,
               ),
               previousIcon: const Icon(
                 Icons.arrow_back_ios,
-                color: Colors.blue,
                 size: 14,
               ),
               activeTextStyle: const TextStyle(
@@ -71,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 fontWeight: FontWeight.w700,
               ),
               activeBtnStyle: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Colors.blue),
+                backgroundColor: MaterialStateProperty.all(Colors.black),
                 shape: MaterialStateProperty.all(
                   RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(38),
@@ -85,6 +84,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               inactiveTextStyle: const TextStyle(
                 fontSize: 14,
+                color: Colors.black,
                 fontWeight: FontWeight.w700,
               ),
             ),
