@@ -32,7 +32,7 @@ dependencies:
   flutter:
     sdk: flutter
   
-  flutter_pagination:
+  pagination_flutter:
     path: ../
 
 

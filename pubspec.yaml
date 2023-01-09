@@ -1,7 +1,7 @@
-name: flutter_pagination
-description: A new Flutter package project.
+name: pagination_flutter
+description: A modular pagination component for flutter
 version: 0.0.1
-homepage:
+homepage: https://github.com/created-by-varun/pagination_flutter
 
 environment:
   sdk: '>=2.18.6 <3.0.0'
