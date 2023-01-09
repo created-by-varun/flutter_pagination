@@ -51,6 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
               numOfPages: 10,
               selectedPage: selectedPage,
               pagesVisible: 5,
+              spacing: 10,
               onPageChanged: (page) {
                 setState(() {
                   selectedPage = page;
@@ -85,6 +86,57 @@ class _MyHomePageState extends State<MyHomePage> {
               inactiveTextStyle: const TextStyle(
                 fontSize: 14,
                 color: Colors.black,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            Pagination(
+              numOfPages: 10,
+              selectedPage: selectedPage,
+              pagesVisible: 5,
+              spacing: 10,
+              onPageChanged: (page) {
+                setState(() {
+                  selectedPage = page;
+                });
+              },
+              nextIcon: const Icon(
+                Icons.arrow_forward_ios,
+                size: 14,
+              ),
+              previousIcon: const Icon(
+                Icons.arrow_back_ios,
+                size: 14,
+              ),
+              activeTextStyle: const TextStyle(
+                color: Colors.white,
+                fontSize: 14,
+                fontWeight: FontWeight.w700,
+              ),
+              activeBtnStyle: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.redAccent),
+                shape: MaterialStateProperty.all(const CircleBorder(
+                  side: BorderSide(
+                    color: Colors.redAccent,
+                    width: 1,
+                  ),
+                )),
+              ),
+              inactiveBtnStyle: ButtonStyle(
+                elevation: MaterialStateProperty.all(0),
+                backgroundColor: MaterialStateProperty.all(Colors.white),
+                shape: MaterialStateProperty.all(const CircleBorder(
+                  side: BorderSide(
+                    color: Colors.redAccent,
+                    width: 1,
+                  ),
+                )),
+              ),
+              inactiveTextStyle: const TextStyle(
+                fontSize: 14,
+                color: Colors.redAccent,
                 fontWeight: FontWeight.w700,
               ),
             ),

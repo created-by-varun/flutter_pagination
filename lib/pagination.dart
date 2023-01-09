@@ -14,7 +14,8 @@ class Pagination extends StatefulWidget {
       required this.inactiveTextStyle,
       required this.inactiveBtnStyle,
       this.previousIcon,
-      this.nextIcon});
+      this.nextIcon,
+      this.spacing});
 
   final int numOfPages;
   final int selectedPage;
@@ -26,6 +27,7 @@ class Pagination extends StatefulWidget {
   final ButtonStyle inactiveBtnStyle;
   final Icon? previousIcon;
   final Icon? nextIcon;
+  final double? spacing;
 
   @override
   State<Pagination> createState() => _PaginationState();
@@ -93,6 +95,9 @@ class _PaginationState extends State<Pagination> {
               ),
             ),
           ),
+        SizedBox(
+          width: widget.spacing ?? 0,
+        ),
         IconButton(
           icon: widget.nextIcon ?? const Icon(Icons.arrow_forward_ios),
           onPressed: widget.selectedPage < widget.numOfPages
