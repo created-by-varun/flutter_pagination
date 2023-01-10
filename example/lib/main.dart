@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        splashColor: Colors.transparent,
       ),
       home: const MyHomePage(),
     );
@@ -47,6 +48,59 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Pagination(
+              numOfPages: 10,
+              selectedPage: selectedPage,
+              pagesVisible: 5,
+              spacing: 10,
+              onPageChanged: (page) {
+                setState(() {
+                  selectedPage = page;
+                });
+              },
+              nextIcon: const Icon(
+                Icons.chevron_right_rounded,
+                color: Colors.redAccent,
+                size: 20,
+              ),
+              previousIcon: const Icon(
+                Icons.chevron_left_rounded,
+                color: Colors.redAccent,
+                size: 20,
+              ),
+              activeTextStyle: const TextStyle(
+                color: Colors.white,
+                fontSize: 14,
+                fontWeight: FontWeight.w700,
+              ),
+              activeBtnStyle: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.redAccent),
+                shape: MaterialStateProperty.all(const CircleBorder(
+                  side: BorderSide(
+                    color: Colors.redAccent,
+                    width: 1,
+                  ),
+                )),
+              ),
+              inactiveBtnStyle: ButtonStyle(
+                elevation: MaterialStateProperty.all(0),
+                backgroundColor: MaterialStateProperty.all(Colors.white),
+                shape: MaterialStateProperty.all(const CircleBorder(
+                  side: BorderSide(
+                    color: Colors.redAccent,
+                    width: 1,
+                  ),
+                )),
+              ),
+              inactiveTextStyle: const TextStyle(
+                fontSize: 14,
+                color: Colors.redAccent,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
             Pagination(
               numOfPages: 10,
               selectedPage: selectedPage,
@@ -103,12 +157,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 });
               },
               nextIcon: const Icon(
-                Icons.arrow_forward_ios,
-                size: 14,
+                Icons.arrow_circle_right_outlined,
+                color: Colors.amberAccent,
+                size: 35,
               ),
               previousIcon: const Icon(
-                Icons.arrow_back_ios,
-                size: 14,
+                Icons.arrow_circle_left_outlined,
+                color: Colors.amberAccent,
+                size: 35,
               ),
               activeTextStyle: const TextStyle(
                 color: Colors.white,
@@ -116,27 +172,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 fontWeight: FontWeight.w700,
               ),
               activeBtnStyle: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Colors.redAccent),
-                shape: MaterialStateProperty.all(const CircleBorder(
-                  side: BorderSide(
-                    color: Colors.redAccent,
-                    width: 1,
-                  ),
-                )),
+                backgroundColor: MaterialStateProperty.all(Colors.amber),
+                elevation: MaterialStateProperty.all(15),
               ),
               inactiveBtnStyle: ButtonStyle(
                 elevation: MaterialStateProperty.all(0),
-                backgroundColor: MaterialStateProperty.all(Colors.white),
-                shape: MaterialStateProperty.all(const CircleBorder(
-                  side: BorderSide(
-                    color: Colors.redAccent,
-                    width: 1,
-                  ),
-                )),
               ),
               inactiveTextStyle: const TextStyle(
                 fontSize: 14,
-                color: Colors.redAccent,
+                color: Colors.amber,
                 fontWeight: FontWeight.w700,
               ),
             ),
