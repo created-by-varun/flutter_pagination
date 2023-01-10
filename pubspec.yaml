@@ -1,6 +1,6 @@
 name: pagination_flutter
 description: A modular pagination component for flutter
-version: 0.0.3
+version: 0.0.4
 homepage: https://github.com/created-by-varun/pagination_flutter
 
 environment:
