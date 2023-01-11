@@ -5,7 +5,7 @@
 ### Installation
 ```yaml
 dependencies:
-  pagination_flutter: ^0.0.6
+  pagination_flutter: ^0.0.7
 ```
 
 
@@ -94,7 +94,7 @@ class _MyHomePageState extends State<MyHomePage> {
 ### Properties
 
 | Name | Type | Default | Description |
-| :--- | :--- | :--- | :--- |
+| :--- | :---: | :---: | ---: |
 | numOfPages | int | 0 | Number of pages to be displayed |
 | selectedPage | int | 0 | The currently selected page |
 | pagesVisible | int | 0 | Number of pages to be visible |
