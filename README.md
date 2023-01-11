@@ -5,7 +5,7 @@
 ### Installation
 ```yaml
 dependencies:
-  pagination_flutter: ^0.0.7
+  pagination_flutter: ^0.0.8
 ```
 
 
